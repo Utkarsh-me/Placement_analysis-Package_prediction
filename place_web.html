@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .info {
+            font-size: 12px;
+            color: #888;
+        }
+        .prediction {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9f7ef;
+            color: #2c7d3e;
+            border: 1px solid #2c7d3e;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Information Form</h2>
+        <form action="/result" method="POST">
+            <div class="form-group">
+                <label for="company">Company Type (0 for MNC and 1 for Startup)</label>
+                <input type="number" id="company" name="company" placeholder="0 or 1">
+                <p class="info"> NOTE: 0 for MNC and 1 for Startup</p>
+            </div>
+            <div class="form-group">
+                <label for="position">Position</label>
+                <select id="position" name="position" placeholder=" Select position ">
+                    <option value="" disabled selected>Enter position code</option>
+                    <option value="0">Trainee - Computer Application</option>
+                    <option value="1">Trainee Executive</option>
+                    <option value="2">Trainee Transaction Processing Officer</option>
+                    <option value="3">Graduate Trainee</option>
+                    <option value="4">Subject Matter Expert</option>
+                    <option value="5">Primary Teacher</option>
+                    <option value="6">Associate Consultant (AC 1)</option>
+                    <option value="7">Marketing Trainee</option>
+                    <option value="8">AR Associate - Trainee</option>
+                    <option value="9">Trainee Transaction Processing Officer</option>
+                    <option value="10">BPM Process</option>
+                    <option value="11">Operation Executive</option>
+                    <option value="12">Scholar Trainee</option>
+                    <option value="13">Process Executive</option>
+                    <option value="14">Ignite Trainee</option>
+                    <option value="15">Associate</option>
+                    <option value="16">Sales Trainee</option>
+                    <option value="17">ÿScholar Trainee</option>
+                    <option value="18">Associate Trainee</option>
+                    <option value="19">Trainee</option>
+                    <option value="20">Analyst</option>
+                    <option value="21">System Engineer</option>
+                    <option value="22">Associate Consultant</option>
+                    <option value="23">Trainee Software Engineer</option>
+                    <option value="24">System and Application Services Associate</option>
+                    <option value="25">IT Engineer</option>
+                    <option value="26">Rider shift incharge</option>
+                    <option value="27">Talent Acquisition Trainee</option>
+                    <option value="28">Associate</option>
+                    <option value="29">Assiciate Consultant</option>
+                    <option value="30">Jr. QA Engineer / QA Engineer</option>
+                    <option value="31">Digital Marketing - Trainee</option>
+                    <option value="32">Business Analyst</option>
+                    <option value="33">Sales Consultant</option>
+                    <option value="34">QA Automation / Manual Tester(Selenium)</option>
+                    <option value="35">Developer</option>
+                    <option value="36">Associate Analyst</option>
+                    <option value="37">Accounts and Finance Trainee</option>
+                    <option value="38">Digital Marketing Officer</option>
+                    <option value="39">Marketing Officer</option>
+                    <option value="40">Production Supervisor</option>
+                    <option value="41">Insurance</option>
+                    <option value="42">Jr. Developer</option>
+                    <option value="43">CRE</option>
+                    <option value="44">Executive - Business Development</option>
+                    <option value="45">Business Developer</option>
+                    <option value="46">Other</option>
+                  </select>
+                  
+            </div>
+            <div class="form-group">
+                <label for="passing_year">Passing Year</label>
+                <input type="number" id="passing_year" name="passing_year" placeholder="Enter passing year">
+            </div>
+            <div class="form-group">
+                <label for="percentage">Percentage</label>
+                <input type="number" step="0.01" id="percentage" name="percentage" placeholder="Enter percentage">
+            </div>
+            <div class="form-group">
+                <label for="a_i_rating">Aptitude Rating</label>
+                <input type="number" step="0.01" id="a_i_rating" name="a_i_rating" placeholder="Enter aptitude rating">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        
+    </div>
+</body>
+</html>
